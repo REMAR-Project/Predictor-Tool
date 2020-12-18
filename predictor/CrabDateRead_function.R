@@ -135,7 +135,7 @@ CrabDateRead = function(file = NULL) {
     
     # Get state from google maps
     state <- ""
-    url = paste0("https://maps.googleapis.com/maps/api/geocode/json?latlng=", latitude.dec, ",", longitude.dec, "&key=AIzaSyCKfzrRm8UtGzJo9Z-ek0gX4l2eeRtfzUk")
+    url = paste0("https://maps.googleapis.com/maps/api/geocode/json?latlng=", latitude.dec, ",", longitude.dec, "&key=YOUR_API_KEY")
     google.raw <- GET(url=url)
     json <- fromJSON(rawToChar(google.raw$content))
     for (i in 1:length(json$results$address_components))
